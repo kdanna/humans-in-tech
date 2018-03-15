@@ -3,3 +3,54 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+h1, h2, p, ul, li {
+  font-family: sans-serif;
+}
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+ul.header {
+  background-color: #111;
+  padding: 0;
+}
+ul.header li a {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+.active {
+  background-color: rgba(219, 5, 112, 0);
+}
+.content {
+  background-color: #FFF;
+  padding: 20px;
+}
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+.content li {
+  margin-bottom: 10px;
+}
+
+/* styling for signUp form */
+.button-success {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(28, 184, 65); /* this is a green */
+}
+.button-xlarge {
+  font-size: 125%;
+}
+button {
+  float: right;
+}
+#first-name, #last-name, #email {
+  width: 50%;
+}
