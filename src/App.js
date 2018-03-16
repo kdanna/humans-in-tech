@@ -13,26 +13,28 @@ class App extends Component {
     return (
       <div className="App">
         <MuiThemeProvider>
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Humans in Tech</h1>
-          </header>
-          <HashRouter>  
-            <div className="navBar">
-              <ul className="header">
-                  <li><NavLink exact to="/">Home</NavLink></li>
-                  <li><NavLink to="/meet-the-team">Meet the Team</NavLink></li>
-                  <li><NavLink to="/get-involved">Get Involved</NavLink></li>
-                  <li><NavLink to="/contact">Contact Us</NavLink></li>
-              </ul>
-              <div className="content">
-                <Route exact path="/" component={Home}/>
-                <Route path="/get-involved" component={GetInvolved}/>
-                <Route path="/meet-the-team" component={MeetTeam}/>
-                <Route path="/contact" component={ContactUs}/>
+          <div>
+            <header className="App-header">
+              <img src={logo} className="App-logo" alt="logo" />
+              <h1 className="App-title">Humans in Tech</h1>
+            </header>
+            <HashRouter>  
+              <div className="navBar">
+                <ul className="header">
+                    <li><NavLink exact to="/">Home</NavLink></li>
+                    <li><NavLink to="/meet-the-team">Meet the Team</NavLink></li>
+                    <li><NavLink to="/get-involved">Get Involved</NavLink></li>
+                    <li><NavLink to="/contact">Contact Us</NavLink></li>
+                </ul>
+                <div className="content">
+                  <Route exact path="/" component={Home}/>
+                  <Route path="/get-involved" component={GetInvolved}/>
+                  <Route path="/meet-the-team" component={MeetTeam}/>
+                  <Route path="/contact" component={ContactUs}/>
+                </div>
               </div>
-            </div>
-          </HashRouter>
+            </HashRouter>
+          </div>
         </MuiThemeProvider>
       </div>
     );
