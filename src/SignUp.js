@@ -61,13 +61,16 @@ class SignUp extends Component {
         else {
             console.log("valid email, so action here")
             let data = {
-                first_name: this.state.firstName,
-                last_name: this.state.lastName,
-                email_address: this.state.email
+                firstName: this.state.firstName,
+                lastName: this.state.lastName,
+                emailAddress: this.state.email
             }
             console.log(data)
-            let url = "https://script.google.com/macros/s/AKfycbxSll7FPY7GabpSe9zGwFPbRxfIKLRaH0Rfj5uAba6CYL5xlCY/exec"
-            Post(url, data)
+            let urlBase = "https://script.google.com/macros/s/AKfycbxSll7FPY7GabpSe9zGwFPbRxfIKLRaH0Rfj5uAba6CYL5xlCY/exec"
+            let params = "?firstName=" + data.firstName + "&lastName=" + data.lastName + "&emailAddress=" + data.emailAddress
+            let url = urlBase + params
+            console.log("url", url)
+            Post(url)
                 .then(json =>{
                     this.setState({
                         firstName: '', 
@@ -83,11 +86,11 @@ class SignUp extends Component {
     render() {
       return (
         <div>
-            <form id="gform" method="GET" action="https://script.google.com/macros/s/AKfycbxSll7FPY7GabpSe9zGwFPbRxfIKLRaH0Rfj5uAba6CYL5xlCY/exec">
+            <form id="gform" method="GET" action="https://script.google.com/macros/s/AKfycbxSll7FPY7GabpSe9zGwFPbRxfIKLRaH0Rfj5uAba6CYL5xlCY/exec?{}">
                 <TextField
                     floatingLabelText="First Name"
                     type="text" 
-                    name="first_name"
+                    name="firstName"
                     value={this.firstName}
                     onChange={this.handleFirstNameChange}
                 />
@@ -95,7 +98,7 @@ class SignUp extends Component {
                 <TextField
                     floatingLabelText="Last Name"
                     type="text" 
-                    name="last_name"
+                    name="lastName"
                     value={this.LastName}
                     onChange={this.handleLastNameChange}
                 />
@@ -103,7 +106,7 @@ class SignUp extends Component {
                 <TextField
                     floatingLabelText="Email Address"
                     type="text" 
-                    name="email_address"
+                    name="emailAddress"
                     value={this.email}
                     onChange={this.handleEmailChange}
                     errorText={this.state.errorEmail}
