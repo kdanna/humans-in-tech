@@ -4,7 +4,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h2>technology professionals working together, to make working together better</h2>
+        <h2>Empowering the tech community to embrace our humanity</h2>
         <p> The social hierarchy that has been built up through intense
             peer-to-peer competition starting in universities is perpetuated in the workplace. 
             This has created a culture of insecurity where a few feel elite and overconfident while 
@@ -24,4 +24,4 @@ class Home extends Component {
   }
 }
  
-export default Home;
+export default Home

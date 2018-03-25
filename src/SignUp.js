@@ -1,34 +1,8 @@
 import React, { Component } from "react";
-import {TextField, RaisedButton} from 'material-ui';
+import {TextField, RaisedButton} from 'material-ui'
 
-const IsValidEmail = (value) => {
-    var re = /^[^@]+@[^@]+$/
-    return re.test(value)
-}
-
-const Post = (url, data = {}) => {
-    return fetch(url, {
-        method: "GET",
-        data: JSON.stringify(data), 
-        dataType: "json",
-        mode: 'no-cors',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(handleResponse) // parses response to JSON
-  }
-
-const handleResponse = (response) => {
-    if (response) {
-        return response
-    }
-    if (!response) {
-        return response
-    }
-    throw (response)
-}
+import Post from './utils/apiMethods'
+import IsValidEmail from './utils/helperFuncs'
 
 // Send form data to google sheets
 class SignUp extends Component {
@@ -37,7 +11,7 @@ class SignUp extends Component {
         this.state = {
             firstName: '',
             lastName: '',
-            email: '',
+            emailAddress: '',
             errorEmail: '',
             isBtnDisabled: false,
         }
@@ -51,47 +25,37 @@ class SignUp extends Component {
     }
 
     handleEmailChange = (e, val) =>  {
-        this.setState({email: val})
+        this.setState({emailAddress: val})
     }
 
     handleSubmit = () => {
-        if (!IsValidEmail(this.state.email)){
+        if (!IsValidEmail(this.state.emailAddress)){
             this.setState({errorEmail: "please type valid email"})
         }
         else {
             console.log("valid email, so action here")
-            let data = {
-                firstName: this.state.firstName,
-                lastName: this.state.lastName,
-                emailAddress: this.state.email
-            }
-            console.log(data)
             let urlBase = "https://script.google.com/macros/s/AKfycbxSll7FPY7GabpSe9zGwFPbRxfIKLRaH0Rfj5uAba6CYL5xlCY/exec"
-            let params = "?firstName=" + data.firstName + "&lastName=" + data.lastName + "&emailAddress=" + data.emailAddress
+            let params = "?firstName=" + this.state.firstName + "&lastName=" + this.state.lastName + "&emailAddress=" + this.state.emailAddress
             let url = urlBase + params
-            console.log("url", url)
+            console.log("formPostUrl", url)
             Post(url)
-                .then(json =>{
-                    this.setState({
-                        firstName: '', 
-                        lastName: '',
-                        email: '',
-                    })
-                })
-                .catch(r => console.error(r))
+            .then(json => {
+                console.log("api worked")
+                this.setState({firstName:'', lastName: '', emailAddress: '', errorEmail: ''})
+            })
+            .catch(r => {console.log('api catch error')})
         }
     }
-
 
     render() {
       return (
         <div>
-            <form id="gform" method="GET" action="https://script.google.com/macros/s/AKfycbxSll7FPY7GabpSe9zGwFPbRxfIKLRaH0Rfj5uAba6CYL5xlCY/exec?{}">
+            <form id="gform">
                 <TextField
                     floatingLabelText="First Name"
                     type="text" 
                     name="firstName"
-                    value={this.firstName}
+                    value={this.state.firstName}
                     onChange={this.handleFirstNameChange}
                 />
                 <br />
@@ -99,7 +63,7 @@ class SignUp extends Component {
                     floatingLabelText="Last Name"
                     type="text" 
                     name="lastName"
-                    value={this.LastName}
+                    value={this.state.lastName}
                     onChange={this.handleLastNameChange}
                 />
                 <br />
@@ -107,7 +71,7 @@ class SignUp extends Component {
                     floatingLabelText="Email Address"
                     type="text" 
                     name="emailAddress"
-                    value={this.email}
+                    value={this.state.emailAddress}
                     onChange={this.handleEmailChange}
                     errorText={this.state.errorEmail}
                 />
