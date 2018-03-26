@@ -1,9 +1,12 @@
-import React, { Component } from "react";
- 
+import React, { Component } from "react"
+import { NavBarHome } from './Navbars'
+import './App.css';
+
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div id='home'>
+        <NavBarHome />
         <h2>Empowering the tech community to embrace our humanity</h2>
         <p> The social hierarchy that has been built up through intense
             peer-to-peer competition starting in universities is perpetuated in the workplace. 
