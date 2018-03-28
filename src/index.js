@@ -16,10 +16,7 @@ ReactDOM.render(
     <MuiThemeProvider>
         <BrowserRouter>
             <div className="main">
-                <Route exact path="/" component={App}/>
-                <Route path="/get-involved" component={GetInvolved}/>
-                <Route path="/mentorship" component={Mentorship}/>
-                <Route path="/meet-the-team" component={MeetTeam}/>
+                <Route path="/" component={App}/>
             </div>
         </BrowserRouter>
     </MuiThemeProvider>
