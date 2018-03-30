@@ -8,7 +8,7 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import MenuItem from 'material-ui/MenuItem'
 import {grey800, grey50} from 'material-ui/styles/colors'
 
-import hitLogo from './images/hitLogoNoBorder.svg'
+import hitLogo from './images/hitLogoNoBorderOrange.svg'
 
 
 export const HeroBlock = () => (
