@@ -15,9 +15,7 @@ class Landing extends Component {
           <div> EMPOWERING THE TECH COMMUNITY TO EMBRACE OUR HUMANITY </div>
         </div>
         <div className='content'>
-          <div className='contentHeader'>
             <h2>Vision / Mission</h2>
-          </div>
           <div className='contentBody'>
             <p> The social hierarchy that has been built up through intense
                 peer-to-peer competition starting in universities is perpetuated in the workplace. 

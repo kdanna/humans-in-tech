@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: 500px;
+  height: 300px;
   margin-top: 65px;
 }
 
@@ -30,46 +30,27 @@
 .tagline p {
   text-align: center;
 }
-/* styling for Nav bars */
 
-/* h1, h2, p, ul, li {
-  font-family: sans-serif;
-}
-ul.header li {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
-}
-ul.header {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-ul.header li a {
-  color: #333333;
-  font-weight: bold;
-  font-size: 100%;
-  text-transform: uppercase;
-  text-decoration: underline;
-  text-decoration-color: #FE5E31;
-  padding: 20px;
-  display: inline-block;
-}
-.active {
-  background-color: rgba(219, 5, 112, 0);
-} */
 .content {
-  margin-top: 50px;
-  margin-bottom: 50 px;
-  background-color: #FFF;
+  /* background-color: #333333; */
+  width: 100%;
+  height: auto;
+  bottom: 0px;
+  top: 0px;
+  left: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
-/* .content h2 {
-  padding: 0;
-  margin: 0;
+
+.content h2 {
+ color: black;
+ text-align: center;
+ text-decoration: underline;
 }
-.content li {
-  margin-bottom: 10px;
-} */
+
+.contentBody {
+
+}
 
 /* styling for signUp form */
 .button-success {

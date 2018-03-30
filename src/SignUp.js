@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import {TextField, RaisedButton} from 'material-ui'
+import {TextField, RaisedButton, FlatButton} from 'material-ui'
+import Dialog from 'material-ui/Dialog'
 
 import Post from './utils/apiMethods'
 import IsValidEmail from './utils/helperFuncs'
@@ -14,6 +15,7 @@ class SignUp extends Component {
             emailAddress: '',
             errorEmail: '',
             isBtnDisabled: false,
+            open: false,
         }
     }
     handleFirstNameChange = (e, val) =>  {
@@ -26,6 +28,13 @@ class SignUp extends Component {
 
     handleEmailChange = (e, val) =>  {
         this.setState({emailAddress: val})
+    }
+
+    handleOpen = () => {
+        this.setState({open: true})
+    }
+    handleClose = () => {
+        this.setState({open: false})
     }
 
     handleSubmit = () => {
@@ -48,42 +57,62 @@ class SignUp extends Component {
     }
 
     render() {
+        const actions = [
+            <FlatButton
+              label="Cancel"
+              onClick={this.handleClose}
+              className="cancel-left"
+            />,
+            <RaisedButton
+              label="Submit"
+              type="button"
+              primary={true}
+              id="submit-form"
+              onClick={this.handleSubmit}
+            />,
+          ]
       return (
-        <div>
-            <form id="gform">
-                <TextField
-                    floatingLabelText="First Name"
-                    type="text" 
-                    name="firstName"
-                    value={this.state.firstName}
-                    onChange={this.handleFirstNameChange}
-                />
-                <br />
-                <TextField
-                    floatingLabelText="Last Name"
-                    type="text" 
-                    name="lastName"
-                    value={this.state.lastName}
-                    onChange={this.handleLastNameChange}
-                />
-                <br />
-                <TextField
-                    floatingLabelText="Email Address"
-                    type="text" 
-                    name="emailAddress"
-                    value={this.state.emailAddress}
-                    onChange={this.handleEmailChange}
-                    errorText={this.state.errorEmail}
-                />
-                <br />                
-                <RaisedButton 
-                    label="Submit" 
-                    type="button"
-                    id="submit-form"
-                    onClick={this.handleSubmit}
-                />
-            </form>
-        </div>
+        <span>
+            <RaisedButton label="Sign Up" onClick={this.handleOpen} />
+            <Dialog
+                title="Sign Up for Our Mailing List"
+                titleStyle={{textAlign: "center"}}
+                actions={actions}
+                modal={false}
+                open={this.state.open}
+                onRequestClose={this.handleClose}
+                contentStyle={{width: "50%", maxWidth: "none", textAlign: "center"}}
+                autoScrollBodyContent={true}
+            >
+                <form id="gform">
+                    <TextField
+                        floatingLabelText="First Name"
+                        type="text"
+                        name="firstName"
+                        value={this.state.firstName}
+                        onChange={this.handleFirstNameChange}
+                    />
+                    <br />
+                    <TextField
+                        floatingLabelText="Last Name"
+                        type="text"
+                        name="lastName"
+                        value={this.state.lastName}
+                        onChange={this.handleLastNameChange}
+                    />
+                    <br />
+                    <TextField
+                        floatingLabelText="Email Address"
+                        type="text"
+                        name="emailAddress"
+                        value={this.state.emailAddress}
+                        onChange={this.handleEmailChange}
+                        errorText={this.state.errorEmail}
+                    />
+                    <br />       
+                </form>
+            </Dialog>
+        </span>
       );
     }
   }

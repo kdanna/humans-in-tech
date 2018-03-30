@@ -6,9 +6,6 @@ import registerServiceWorker from './registerServiceWorker';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 import App from './App'
-import GetInvolved from "./GetInvolved";
-import MeetTeam from "./MeetTeam";
-import Mentorship from "./Mentorship";
 
 registerServiceWorker();
 

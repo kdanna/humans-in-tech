@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 
 import AppBar from 'material-ui/AppBar'
@@ -13,7 +12,7 @@ import hitLogo from './images/hitLogoNoBorder.svg'
 
 
 export const HeroBlock = () => (
-  <div className='content'>
+  <div className='heroContent'>
     <div className="heroImg">
       <img className="logo" src={hitLogo} alt="logo" />
     </div>
