@@ -1,6 +1,6 @@
 /* styling for landing page & hero img */
 .heroImg {
-  background-image: url('../src/images/heroImage.png');
+  background-image: url('../src/images/heroImgNight.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,7 +24,8 @@
 
 .taglineDiv div {
   line-height: 64px;
-  font-size: 20px;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
 .tagline p {
@@ -50,6 +51,10 @@
 
 .contentBody {
 
+}
+
+.valuesImg {
+  height: 200px;
 }
 
 /* styling for signUp form */
