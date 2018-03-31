@@ -7,7 +7,8 @@ The Humans in Tech Project aims to create a tech community built upon our shared
 
 #####Contributing to Project
 
-* Clone this repo
-* Checkout a branch to work on
-* From the root dir: `yarn install` which will install all the packages from the packages.json file (you should also be able to do this via npm)
-* To start the local server: `yarn start`. This will serve to localhost:3000
+* Clone this repo.
+* Checkout a branch to work on.
+* From the root dir: `yarn install` which will install all the packages from the packages.json file (you should also be able to do this via npm). For information about Yarn go [here](https://yarnpkg.com/lang/en/docs/cli/install/).
+* To start the local server: `yarn start`. This will serve to localhost:3000.
+* Push your branch back up to github and we will review before merging in changes.
