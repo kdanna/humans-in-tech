@@ -5,7 +5,7 @@ You can find the most recent version of the React guide [here](https://github.co
 
 The Humans in Tech Project aims to create a tech community built upon our shared humanity. This is a world where individuals and teams will engage in inclusive collaboration by being empathetic, vulnerable, and generous. We believe that the resulting safe culture will allow individuals to experience a sense of purpose, allow teams to capitalize on their member’s knowledge/creativity, and allow the community as a whole to create technology aligned with the values of humanity.
 
-#####Contributing to Project
+##### Contributing to Project
 
 * Clone this repo.
 * Checkout a branch to work on.
