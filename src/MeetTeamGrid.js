@@ -6,11 +6,11 @@ const styles = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    
+    overflow: 'hidden',
   },
   gridList: {
-    width: 750,
-    height: 750,
+    width: 500,
+    height: 450,
     overflowY: 'auto',
   },
 };
@@ -38,13 +38,10 @@ const tilesData = [
   },
 ];
 
-/**
- * A simple example of a scrollable `GridList` containing a [Subheader](/#/components/subheader).
- */
 const Grid = () => (
     <div className='Grid' style={styles.root}>
         <GridList
-            cellHeight={375}
+            cellHeight={180}
             style={styles.gridList}
         >
             {tilesData.map((tile) => (

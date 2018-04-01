@@ -1,31 +1,32 @@
 /* styling for landing page & hero img */
 .heroImg {
-  background-image: url('../src/images/heroImgNight.svg');
+  background-image: url('../src/images/heroImgNight.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: 300px;
-  margin-top: 65px;
+  height: 500px;
+  margin-top: 60px;
 }
 
 .logo {
   position: absolute;
-  width: 33%;
+  width: 40%;
   height: auto;
-  left: 25px;
-  top: 10px;
+  left: 50px;
+  top: 50px;
 }
 
 .taglineDiv {
-  background: #333333;
-  color: white;
+  /* background: #232ED1; */
+  color:#232ED1;
 }
 
 .taglineDiv div {
-  line-height: 64px;
-  font-size: 18px;
-  letter-spacing: 1px;
+  line-height: 75px;
+  font-size: 24px;
+  letter-spacing: .5px;
+  font-weight: bolder;
 }
 
 .tagline p {
@@ -39,14 +40,16 @@
   bottom: 0px;
   top: 0px;
   left: 0;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .content h2 {
- color: black;
- text-align: center;
- text-decoration: underline;
+  font-family: 'Avenir', serif;
+  color: black;
+  text-align: left;
+  text-decoration: underline;
+  font-weight: bolder;
 }
 
 .contentBody {
@@ -54,7 +57,7 @@
 }
 
 .valuesImg {
-  height: 200px;
+  height: 300px;
 }
 
 /* styling for signUp form */

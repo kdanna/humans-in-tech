@@ -4,7 +4,7 @@ import './App.css';
 import GetInvolved from "./GetInvolved";
 import Mentorship from "./Mentorship";
 import MeetTeam from "./MeetTeam";
-import valuesWordCloud from "./images/valuesWordCloud.svg"
+import valuesWordCloud from "./images/valuesWordCloud.png"
 
 
 class Landing extends Component {

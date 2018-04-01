@@ -6,8 +6,7 @@ class MeetTeam extends Component {
     return (
       <div id='meet-the-team' className='content'>
         <h2>Meet the Team</h2>
-        <p>Mauris sem velit, vehicula eget sodales vitae,
-        rhoncus eget sapien:</p>
+        <p>Meet the people behind Humans in Tech</p>
         <Grid />
       </div>
     );
