@@ -17,3 +17,15 @@
     font-size: 1.5em;
 }
 
+
+
+/* Mobile Design Media Queries */
+@media only screen and (max-width: 768px) {
+    .content {
+        padding: 1em;
+    }
+    .content p {
+        font-size: 1em;
+    }
+
+}

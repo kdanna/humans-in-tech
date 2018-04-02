@@ -57,9 +57,13 @@
 
 
 
-/* .contentBody {
-
-} */
+/* Mobile Design Media Queries */
+@media only screen and (max-width: 768px) {
+  .taglineDiv h2:after {
+    margin: 0 auto;
+    width: 100px;
+  }
+}
 
 .valuesImg {
   width: 200px;

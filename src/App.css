@@ -27,3 +27,13 @@ html, body {
   float: left;
   width: 100%;
 }
+
+
+
+/* Mobile Design Media Queries */
+@media only screen and (max-width: 768px) {
+  .column {
+    float: left;
+    width: 100%;
+  }
+}
