@@ -1,3 +1,5 @@
+
+
 /* styling for landing page & hero img */
 .heroContent {
   background-image: url('../src/images/tech-people.jpg');
@@ -24,8 +26,22 @@
 }
 
 .taglineDiv {
-  /* background: #232ED1; */
-  color:#232ED1;
+  padding: 5em 0 2em;
+}
+.taglineDiv h2 {
+  color:#363636;
+  font-family: 'Avenir', serif;
+  font-weight: 800;
+  font-size: 1.4em;
+}
+.taglineDiv h2:after {
+  background: #6165d4;
+  display: block;
+  content: '';
+  height: 10px;
+  margin: 15px 0;
+  width: 400px;
+  margin-left: 310px;
 }
 
 .taglineDiv div {
@@ -39,31 +55,15 @@
   text-align: center;
 }
 
-.content {
-  /* background-color: #333333; */
-  width: 100%;
-  height: auto;
-  bottom: 0px;
-  top: 0px;
-  left: 0;
-  padding-bottom: 20px;
-  padding-top: 20px;
-}
 
-.content h2 {
-  font-family: 'Avenir', serif;
-  color: black;
-  text-align: left;
-  text-decoration: underline;
-  font-weight: bolder;
-}
 
 /* .contentBody {
 
 } */
 
 .valuesImg {
-  height: 300px;
+  width: 200px;
+  padding-top: 100px;
 }
 
 /* styling for signUp form */

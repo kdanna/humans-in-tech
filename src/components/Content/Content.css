@@ -1,0 +1,19 @@
+.content {
+    padding: 0 10em;
+}
+
+.content h2 {
+    font-family: 'Avenir', serif;
+    color: #363636;
+    font-weight: 800;
+    text-align: left;
+    font-size: 1.6em;
+}
+.content p {
+    text-align: left;
+    font-family: 'Avenir', serif;
+    color: #363636;
+    font-weight: 300;
+    font-size: 1.5em;
+}
+

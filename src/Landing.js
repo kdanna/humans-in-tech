@@ -3,11 +3,21 @@ import './App.css';
 import GetInvolved from "./GetInvolved";
 import Mentorship from "./Mentorship";
 import MeetTeam from "./MeetTeam";
-import valuesWordCloud from "./images/valuesWordCloud.png";
 import hitLogo from './images/hitLogoWhite.svg';
+import Content from './components/Content/Content';
+import valuesWordCloud from "./images/valuesWordCloud.png";
 
 
 class Landing extends Component {
+
+    state = {
+        tagline: 'EMPOWERING THE TECH COMMUNITY TO EMBRACE OUR HUMANITY',
+        content: {
+            titleOne: 'Vision / Mission',
+            paragraphOne: 'The Humans in Tech Project aims to create a tech community built upon our shared humanity. This is a world where individuals and teams will engage in inclusive collaboration by being empathetic, vulnerable, and generous. We believe that the resulting safe culture will allow individuals to experience a sense of purpose, allow teams to capitalize on their member’s knowledge/creativity, and allow the community as a whole to create technology aligned with the values of humanity.',
+        }
+    };
+
   render() {
     return (
       <div className='App'>
@@ -19,26 +29,25 @@ class Landing extends Component {
           </div>
 
         <div className='taglineDiv'>
-          <div> EMPOWERING THE TECH COMMUNITY TO EMBRACE OUR HUMANITY </div>
+          <div><h2>{this.state.tagline}</h2></div>
         </div>
+
         <div className='content'>
-            <h2>Vision / Mission</h2>
-          <div className='contentBody'>
-            <p> The Humans in Tech Project aims to create a tech community built upon our shared humanity. 
-                This is a world where individuals and teams will engage in inclusive collaboration by 
-                being empathetic, vulnerable, and generous. We believe that the resulting safe culture will 
-                allow individuals to experience a sense of purpose, allow teams to capitalize on their member’s 
-                knowledge/creativity, and allow the community as a whole to create technology aligned with the 
-                values of humanity.
-            </p>
-            <div>
-              <img className="valuesImg" src={valuesWordCloud} alt="valuesImg" />
+            <div className='row'>
+                <div className="column">
+                    <Content title={this.state.content.titleOne} bodyText={this.state.content.paragraphOne} />
+                </div>
+                <div className='column'>
+                    <img className="valuesImg" src={valuesWordCloud} alt="valuesImg" />
+                </div>
             </div>
-          </div>
         </div>
+
         <GetInvolved />
         <Mentorship />
         <MeetTeam />
+
+
        </div>
 
     );
