@@ -8,14 +8,7 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import MenuItem from 'material-ui/MenuItem'
 import {grey800, grey50} from 'material-ui/styles/colors'
 
-
-
-
-export const HeroBlock = () => (
-
-);
-
-const appBarStyle = {backgroundColor: grey800, position: "fixed", top: 0}
+const appBarStyle = {backgroundColor: grey50, position: "fixed", top: 0}
 const edit_style = {fontSize:16, width: 'inherit', height: 'inherit'}
 export const NavBar = () => (
     <AppBar
@@ -25,7 +18,7 @@ export const NavBar = () => (
         <IconMenu
             iconButtonElement={
                 <IconButton touch={true} style={edit_style}>
-                  <MoreVertIcon color={grey50} />
+                  <MoreVertIcon color={grey800} />
                 </IconButton>
             }
             anchorOrigin={{horizontal: 'left', vertical: 'top'}}

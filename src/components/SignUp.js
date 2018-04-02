@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import {TextField, RaisedButton, FlatButton} from 'material-ui'
 import Dialog from 'material-ui/Dialog'
 
-import Post from './utils/apiMethods'
-import IsValidEmail from './utils/helperFuncs'
+import Post from '../utils/apiMethods'
+import IsValidEmail from '../utils/helperFuncs'
 
 // Send form data to google sheets
 class SignUp extends Component {
@@ -16,6 +16,7 @@ class SignUp extends Component {
             errorEmail: '',
             isBtnDisabled: false,
             open: false,
+            btnLabel: props.label
         }
     }
     handleFirstNameChange = (e, val) =>  {
@@ -73,7 +74,7 @@ class SignUp extends Component {
           ]
       return (
         <span>
-            <RaisedButton label="Sign Up" onClick={this.handleOpen} />
+            <RaisedButton label={this.state.btnLabel} onClick={this.handleOpen} primary={true}/>
             <Dialog
                 title="Sign Up for Our Mailing List"
                 titleStyle={{textAlign: "center"}}
