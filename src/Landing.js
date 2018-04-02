@@ -1,18 +1,23 @@
 import React, { Component } from "react"
-import { NavBar, HeroBlock } from './Navbars'
 import './App.css';
 import GetInvolved from "./GetInvolved";
 import Mentorship from "./Mentorship";
 import MeetTeam from "./MeetTeam";
-import valuesWordCloud from "./images/valuesWordCloud.png"
+import valuesWordCloud from "./images/valuesWordCloud.png";
+import hitLogo from './images/hitLogoWhite.svg';
 
 
 class Landing extends Component {
   render() {
     return (
       <div className='App'>
-        <NavBar />
-        <HeroBlock />
+
+          <div className='heroContent'>
+              <div className="overlay">
+                  <img className="logo" src={hitLogo} alt="logo" />
+              </div>
+          </div>
+
         <div className='taglineDiv'>
           <div> EMPOWERING THE TECH COMMUNITY TO EMBRACE OUR HUMANITY </div>
         </div>

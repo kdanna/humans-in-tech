@@ -2,7 +2,10 @@
 @import url("https://fonts.googleapis.com/css?family=Avenir");
 
 
-
+html, body {
+  padding: 0;
+  margin: 0;
+}
 .App {
   text-align: center;
   height: 100%;

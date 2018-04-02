@@ -8,15 +8,11 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import MenuItem from 'material-ui/MenuItem'
 import {grey800, grey50} from 'material-ui/styles/colors'
 
-import hitLogo from './images/hitLogoWhite.svg'
+
 
 
 export const HeroBlock = () => (
-  <div className='heroContent'>
-    <div className="heroImg">
-      <img className="logo" src={hitLogo} alt="logo" />
-    </div>
-  </div>
+
 );
 
 const appBarStyle = {backgroundColor: grey800, position: "fixed", top: 0}
