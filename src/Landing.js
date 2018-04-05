@@ -25,6 +25,9 @@ class Landing extends Component {
         buttonLabel: {
             mailingList: "Join Our Mailing List",
             mentorshipApplication: "Apply Now",
+        },
+        forms: {
+            signUp: <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeZTjMCK4iMPgpaKEm6TA6s0y46N3o6Ia_DI1tHTiFrZzihrQ/viewform?embedded=true" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>,
         }
     };
 
@@ -60,6 +63,7 @@ class Landing extends Component {
                 </div>
                 <SignUp
                     label={this.text.buttonLabel.mailingList}
+                    formLink={this.text.forms.signUp}
                 />
             </div>
         </div>
