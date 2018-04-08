@@ -1,12 +1,13 @@
 import React from 'react';
 
 const MeetTeamBlock = (props) => {
-    const buildPicURL = props.img
+    let picture = props.picture
+    let buildPicUrl = 'url(' + picture + ')'
     return(
         <div className='content'>
             <div className='row'>
                 <div className="column-twenty">
-                    <div className='teamMemberImg' style={{backgroundImage: props.img}}></div>
+                    <div className='teamMemberImg' style={{backgroundImage: buildPicUrl}}></div>
                 </div>
                 <div className="column-eighty">
                     <div className='teamMemberDesc'>

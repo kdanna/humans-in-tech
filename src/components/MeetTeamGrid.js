@@ -1,6 +1,8 @@
 import React from 'react';
 import {GridList, GridTile} from 'material-ui/GridList';
 
+//DEPRECATED FOR NOW
+
 const styles = {
   root: {
     display: 'flex',

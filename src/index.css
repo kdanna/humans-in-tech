@@ -51,11 +51,11 @@
 }
 
 .teamMemberImg {
-  background-image: url('https://media.licdn.com/dms/image/C4E03AQE8mX-Zoz7qMg/profile-displayphoto-shrink_800_800/0?e=1527202800&v=alpha&t=7d9ZakXkdgQdXEdGqbcgK8DKglve_0qp-HQiHHJDcy8');
   background-position: left;
   background-repeat: no-repeat;
   position: relative;
-  height: 250px;
+  height: 200px;
+  width: auto;
 }
 
 .teamMemberDesc {

@@ -3,10 +3,13 @@ import './App.css';
 import hitLogo from './images/hitLogoWhite.svg';
 import Content from './components/Content/Content';
 import SignUp from "./components/SignUp";
-import Grid from './components/MeetTeamGrid'
 import valuesWordCloud from "./images/valuesWordCloud.png";
+import sagi from "./images/sagi.jpg";
+import tim from "./images/tim.jpg";
+import sasha from "./images/sasha.jpg";
+import kayce from "./images/kayce.jpg";
 import { NavBar } from "./components/Navbars";
-import MeetTeamBlock from "./components/MeetTeamCards"
+import MeetTeamBlock from "./components/MeetTeamCards";
 
 
 class Landing extends Component {
@@ -45,28 +48,28 @@ class Landing extends Component {
 
     tilesData = [
         {
-          img: 'https://media.licdn.com/dms/image/C4E03AQE8mX-Zoz7qMg/profile-displayphoto-shrink_800_800/0?e=1527202800&v=alpha&t=7d9ZakXkdgQdXEdGqbcgK8DKglve_0qp-HQiHHJDcy8',
+          img: sagi,
           name: 'Sagi Zisman',
           position: 'data scientist',
-          bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim felis, scelerisque in mattis ut, pellentesque sit amet quam. Ut condimentum pretium tempus. Nunc pharetra, dui eu eleifend ultricies, est lectus vulputate nunc, nec lobortis lacus massa at lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi risus felis, aliquet tempus odio at, ullamcorper pulvinar metus. Nullam id tellus ut massa mattis ultricies. Ut venenatis sollicitudin quam, id laoreet enim faucibus consequat.'
+          bio: 'Sagi is passionate about empowering others to become lifelong learners. Since graduating with a BS and MS in Electrical and Computer Engineering from The University of Texas at Austin, he has solidified his passion by teaching data science to dozens of aspiring professionals at General Assembly Denver as well as co-founding a K-12 STEM non-profit called STEMed Labs in Austin, TX. He currently works as a data scientist at Return Path. By co-founding Humans in Tech, Sagi hopes to inspire technologists to form deeper relationships with peers on their quest of lifelong learning.'
         },
         {
-          img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+          img: tim,
           name: 'Tim Perkins',
           position: 'data master',
-          bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim felis, scelerisque in mattis ut, pellentesque sit amet quam. Ut condimentum pretium tempus. Nunc pharetra, dui eu eleifend ultricies, est lectus vulputate nunc, nec lobortis lacus massa at lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi risus felis, aliquet tempus odio at, ullamcorper pulvinar metus. Nullam id tellus ut massa mattis ultricies. Ut venenatis sollicitudin quam, id laoreet enim faucibus consequat.'
+          bio: ''
         },
         {
-          img: 'https://media.licdn.com/dms/image/C5603AQGH236d3o6nIQ/profile-displayphoto-shrink_800_800/0?e=1527202800&v=alpha&t=S5OwUCmyFbAB-zd_XrbX51THlx8F7nGtUOu_IAZqDYA',
+          img: sasha,
           name: 'Sasha Mushovic',
           position: 'data scientist',
-          bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim felis, scelerisque in mattis ut, pellentesque sit amet quam. Ut condimentum pretium tempus. Nunc pharetra, dui eu eleifend ultricies, est lectus vulputate nunc, nec lobortis lacus massa at lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi risus felis, aliquet tempus odio at, ullamcorper pulvinar metus. Nullam id tellus ut massa mattis ultricies. Ut venenatis sollicitudin quam, id laoreet enim faucibus consequat.',
+          bio: 'Sasha grew up in Alaska, the land of the midnight sun. After moving south and earning her BS in Mathematics at the University of Colorado Denver, she began her career in data science. She has since discovered a passion for empowering people and improving teams, and is excited to be part of Humans in Tech.',
         },
         {
-          img: 'https://media.licdn.com/dms/image/C4D03AQFqFY848_mtsg/profile-displayphoto-shrink_200_200/0?e=1527202800&v=alpha&t=oem2tycbkHvBRTVHHn-HLjWwCWCM_OLjrWED9eTBkZA',
+          img: kayce,
           name: 'Kayce Danna',
           position: 'software engineer',
-          bio: 'Kayce is a software engineer with a business finance background who sees opportunity and growth in seeking out new challenges. She is equally at home being the student or the teacher, which perpetuates knowledge sharing amongst engineering teams that she is a part of. Whether she is fixing bugs, or working on features, she takes pride and ownership in everything she touches.'
+          bio: 'Kayce is a software engineer living in Denver, CO. After earning her Bachelors in Business Administration from the University of New Mexico she spent eight years working in the finance industry. Her eyes were opened to the vast world of software development and she knew she found her calling. So she took quit her finance career, enrolled in a web development immersive course, and a new passion was born. She thrilled to be working with Humans in Tech.'
         },
       ];
 
@@ -75,9 +78,6 @@ class Landing extends Component {
         paddingTop: 0,
         paddingLeft: "3em",
         paddingRight: "3em",
-    };
-    const teamMembersOverwriteStyle = {
-        paddingRight: "25em",
     };
     return (
         <div className='App'>
@@ -186,6 +186,7 @@ class Landing extends Component {
         </div>
         {this.tilesData.map((tile) => (
             <MeetTeamBlock
+                key={tile.name}
                 name={tile.name}
                 bio={tile.bio}
                 picture={tile.img}
