@@ -21,29 +21,17 @@
 }
 .logo {
   position: absolute;
-  width:50%;
+  width:40%;
   height: auto;
   left: 50px;
   top: 100px;
 }
 
-.taglineDiv {
-  padding: 5em 0 2em;
-}
 .taglineDiv h2 {
   color:#363636;
   font-family: 'Avenir', serif;
   font-weight: 800;
   font-size: 1.4em;
-}
-.taglineDiv h2:after {
-  background: #6165d4;
-  display: block;
-  content: '';
-  height: 10px;
-  margin: 15px 0;
-  width: 400px;
-  margin-left: 310px;
 }
 
 .taglineDiv div {
@@ -62,19 +50,28 @@
   padding-top: 80px;
 }
 
-
-
-/* Mobile Design Media Queries */
-@media only screen and (max-width: 768px) {
-  .taglineDiv h2:after {
-    margin: 0 auto;
-    width: 100px;
-  }
+.teamMemberImg {
+  background-image: url('https://media.licdn.com/dms/image/C4E03AQE8mX-Zoz7qMg/profile-displayphoto-shrink_800_800/0?e=1527202800&v=alpha&t=7d9ZakXkdgQdXEdGqbcgK8DKglve_0qp-HQiHHJDcy8');
+  background-position: left;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 250px;
 }
 
+.teamMemberDesc {
+  padding-top: 2px;
+  width: 50%;
+}
 
+.list-items {
+  text-align: left;
+  font-family: 'Avenir', serif;
+  color: #363636;
+  font-weight: 300;
+  font-size: 1.0em;
+}
 
-/* styling for signUp form */
+/* styling for signUp form - DEPRECATED */
 .button-success {
   color: white;
   border-radius: 4px;
@@ -89,4 +86,26 @@ button {
 }
 #first-name, #last-name, #email {
   width: 50%;
+} 
+
+/* Mobile Design Media Queries */
+@media only screen and (max-width: 768px) {
+  .heroContent {
+    height: 30vh;
+  }
+  .overlay {
+    height: 30vh
+  }
+  .logo {
+    width:40%;
+    height: auto;
+  }
+  .taglineDiv h2 {
+    font-size: 12px;
+    line-height: 25px;
+  }
+  .taglineDiv h2:after {
+    margin: 0 auto;
+    width: 100px;
+  }
 }

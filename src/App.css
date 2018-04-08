@@ -28,6 +28,16 @@ html, body {
   width: 100%;
 }
 
+.column-twenty {
+  float: left;
+  width: 20%;
+}
+
+.column-eighty {
+  float: left;
+  width: 80%;
+  }
+
 
 
 /* Mobile Design Media Queries */
@@ -36,4 +46,11 @@ html, body {
     float: left;
     width: 100%;
   }
+  .column-twenty{
+    display: none;
+  }
+  .column-eighty {
+    width: 100%;
+    padding: 0;
+    }
 }

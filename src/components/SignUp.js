@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import Dialog from 'material-ui/Dialog'
-import { RaisedButton, FlatButton } from 'material-ui'
+import { RaisedButton } from 'material-ui'
 
 // pass in Google Forms
 class SignUp extends Component {
@@ -30,7 +30,7 @@ class SignUp extends Component {
         ]
         return (
             <span>
-                <RaisedButton label={this.state.btnLabel} onClick={this.handleOpen} primary={true}/>
+                <RaisedButton label={this.state.btnLabel} onClick={this.handleOpen} secondary={true}/>
                 <Dialog
                     modal={false}
                     open={this.state.open}
