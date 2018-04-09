@@ -10,6 +10,7 @@ import sasha from "./images/sasha.jpg";
 import kayce from "./images/kayce.jpg";
 import { NavBar } from "./components/Navbars";
 import MeetTeamBlock from "./components/MeetTeamCards";
+import { RaisedButton } from "material-ui";
 
 
 class Landing extends Component {
@@ -19,12 +20,12 @@ class Landing extends Component {
         content: {
             titleVisonMission: 'Vision / Mission',
             paragraphVisionMission: 'The Humans in Tech Project aims to create a tech community built upon our shared humanity. This is a world where individuals and teams will engage in inclusive collaboration by being empathetic, vulnerable, and generous. We believe that the resulting safe culture will allow individuals to experience a sense of purpose, allow teams to capitalize on their member’s knowledge/creativity, and allow the community as a whole to create technology aligned with the values of humanity.',
-            titleGetInvolved: "Get Involved",
-            paragraphGetInvolved: "There are many ways to get involved in this project. Please start by joining our mailing list so we can keep you updated on events and volunteer opportunities.",
+            titleGetInvolved: "Contact Us / Get Involved",
+            paragraphGetInvolved: "Questions or comments? Are you interested in getting involved? We'd love to hear from you. Please start by filling out the form below to let us know what you are interested in. That we we can keep you updated on all things Humans in Tech.",
             titleMentorship: "Mentorship Program",
             subtitle1Mentorship: "what is it",
             paragraphMentorship1: "The Humans in Tech mentorship program is designed as an experiment in creating a collaborative tech community that continuously gives back to one another. You will be paired with a software developer or data scientist/analyst for a 2 month period. During this time, you will explore topics that go beyond technical skills. You will reach deep to understand what makes you tick and develop your unique value proposition as well as attend a meetup together with your mentor to build your confidence as a member of the community!",
-            paragraphMentorship2: "If this sounds exciting to you, we invite you to attend an information session to learn more about it. The session will be held Wednesday, April 25th @ [TBD]. Please RSVP to the session on the following EventBrite page: [TBD]",
+            paragraphMentorship2: "If this sounds exciting to you, we invite you to attend an information session to learn more about it. The session will be held at OrthoFi, Inc. on Wednesday, April 25th @ at 303 East 17th Avenue #400, Denver, CO 80203. Please RSVP to the session on the following EventBrite page:",
             subtitle2Mentorship: "who is it for",   
             paragraphMentorship3: "We are looking for aspiring or current software developers and aspiring or current data scientists who believe in our shared vision for developing a community. You should be in the Denver area and available during the June/July timeframe for 5 in-person sessions (flexible scheduling) with your mentor as well as the week of May 21st and first week of August for a mentor-matching social and post-mortem whose exact dates/times are TBD.",      
             subtitle3Mentorship: "expectations",
@@ -38,7 +39,7 @@ class Landing extends Component {
             paragraphMeetTeam: "Meet the people behind Humans in Tech.",
         },
         buttonLabel: {
-            mailingList: "Join Our Mailing List",
+            mailingList: "Contact Us",
             mentorshipApplication: "Apply Now",
         },
         forms: {
@@ -138,6 +139,12 @@ class Landing extends Component {
                         <Content 
                             bodyText={this.text.content.paragraphMentorship2} 
                         />
+                        <RaisedButton
+                            label={'Info Session'}
+                            href={'https://www.eventbrite.com/e/humans-in-tech-mentorship-program-info-session-tickets-44966526090?aff=es2'}
+                            target="_blank"
+                        / >
+
                     </div>
                     <div style={mentorshipOverwriteStyle}>
                         <Content 
@@ -156,11 +163,12 @@ class Landing extends Component {
                     <Content 
                         subtitle={this.text.content.subtitle4Mentorship}
                     />
-                    <div className="list-items">
-                        <li>{this.text.content.mentorshipOutcomes1}</li>
-                        <li>{this.text.content.mentorshipOutcomes2}</li>
-                        <li>{this.text.content.mentorshipOutcomes3}</li>
-                        <li>{this.text.content.mentorshipOutcomes4}</li>
+                    <div className="list-items" style={{lineHeight: '1.5'}}>
+                            <p>{this.text.content.mentorshipOutcomes1} <br />
+                                {this.text.content.mentorshipOutcomes2} <br />
+                                {this.text.content.mentorshipOutcomes3} <br />
+                                {this.text.content.mentorshipOutcomes4} <br />
+                            </p>
                     </div>
                 </div>
             </div>
@@ -169,7 +177,9 @@ class Landing extends Component {
         <div className='content'>
             <div className='row'>
                 <div className="column-full">
-                    <SignUp label={this.text.buttonLabel.mentorshipApplication}/>
+                    <SignUp 
+                        label={this.text.buttonLabel.mentorshipApplication}
+                        title={'Application Coming Soon...'}/>
                 </div>
             </div>
         </div>

@@ -9,7 +9,8 @@ class SignUp extends Component {
         this.state = {
             open: false,
             btnLabel: props.label,
-            formLink: props.formLink
+            formLink: props.formLink,
+            title: props.title,
         }
     }
     handleOpen = () => {
@@ -33,6 +34,7 @@ class SignUp extends Component {
                 <RaisedButton label={this.state.btnLabel} onClick={this.handleOpen} secondary={true}/>
                 <Dialog
                     modal={false}
+                    title={this.state.title}
                     open={this.state.open}
                     actions={actions}
                     onRequestClose={this.handleClose}
