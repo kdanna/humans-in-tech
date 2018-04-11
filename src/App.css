@@ -21,8 +21,10 @@ html, body {
 
 .column {
   float: left;
-  width: 50%;
+  width: 48%;
+  padding-left: 1%;
 }
+
 .full-column {
   float: left;
   width: 100%;

@@ -16,7 +16,8 @@ import { RaisedButton } from "material-ui";
 class Landing extends Component {
 
     text = {
-        tagline: 'EMPOWERING THE TECH COMMUNITY TO EMBRACE OUR HUMANITY',
+        taglineln1: 'EMPOWERING THE TECH COMMUNITY',
+        taglineln2: 'TO EMBRACE OUR HUMANITY',
         content: {
             titleVisonMission: 'Vision / Mission',
             paragraphVisionMission: 'The Humans in Tech Project aims to create a tech community built upon our shared humanity. This is a world where individuals and teams will engage in inclusive collaboration by being empathetic, vulnerable, and generous. We believe that the resulting safe culture will allow individuals to experience a sense of purpose, allow teams to capitalize on their member’s knowledge/creativity, and allow the community as a whole to create technology aligned with the values of humanity.',
@@ -90,7 +91,10 @@ class Landing extends Component {
             </div>
 
         <div className='taglineDiv'>
-            <div><h2>{this.text.tagline}</h2></div>
+            <div>
+                <h2>{this.text.taglineln1}</h2>
+                <h2 style={{marginTop: '-60px'}}>{this.text.taglineln2}</h2>
+            </div>
         </div>
 
         <div className='content'>
@@ -98,27 +102,20 @@ class Landing extends Component {
                 <div className="column">
                     <Content title={this.text.content.titleVisonMission} bodyText={this.text.content.paragraphVisionMission} />
                 </div>
-                <div className='column'>
-                    <img className="valuesImg" src={valuesWordCloud} alt="valuesImg" />
-                </div>
-            </div>
-        </div>
-
-        <div className='content'>
-            <div className='row'>
-                <div id='get-involved' className="column-full">
+                <div id='get-involved' className="column">
                     <Content title={this.text.content.titleGetInvolved} bodyText={this.text.content.paragraphGetInvolved} />
-                </div>
-            </div>
-        </div>
-
-        <div className='content'>
-            <div className='row'>
-                <div className="column-full">
                     <SignUp
                         label={this.text.buttonLabel.mailingList}
                         formLink={this.text.forms.signUp}
                     />
+                </div>
+            </div>
+        </div>
+
+        <div className='content'>
+            <div className='row'>
+                <div className='column-full'>
+                    <img className="valuesImg" src={valuesWordCloud} alt="valuesImg" />
                 </div>
             </div>
         </div>

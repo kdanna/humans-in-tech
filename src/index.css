@@ -29,9 +29,12 @@
 
 .taglineDiv h2 {
   color:#363636;
-  font-family: 'Avenir', serif;
+  font-family: 'Arvo', serif;
   font-weight: 800;
   font-size: 1.4em;
+  padding-left: 1em;
+  padding-right: 1em;
+
 }
 
 .taglineDiv div {
@@ -47,7 +50,6 @@
 
 .valuesImg {
   width: 90%;
-  padding-top: 80px;
 }
 
 .teamMemberImg {
