@@ -11,7 +11,7 @@ const MeetTeamBlock = (props) => {
                 </div>
                 <div className="column-eighty">
                     <div className='teamMemberDesc'>
-                        <p>{props.name} </p>
+                        <p style={{marginTop:0, fontWeight:'bolder', fontSize:'1.1em'}}>{props.name} </p>
                         <p>{props.bio}</p>
                     </div>
                 </div>

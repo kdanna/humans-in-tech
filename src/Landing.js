@@ -19,7 +19,7 @@ class Landing extends Component {
         taglineln1: 'EMPOWERING THE TECH COMMUNITY',
         taglineln2: 'TO EMBRACE OUR HUMANITY',
         content: {
-            titleVisonMission: 'Vision / Mission',
+            titleVisonMission: 'Vision & Mission',
             paragraphVisionMission: 'The Humans in Tech Project aims to create a tech community built upon our shared humanity. This is a world where individuals and teams will engage in inclusive collaboration by being empathetic, vulnerable, and generous. We believe that the resulting safe culture will allow individuals to experience a sense of purpose, allow teams to capitalize on their member’s knowledge/creativity, and allow the community as a whole to create technology aligned with the values of humanity.',
             titleGetInvolved: "Contact Us / Get Involved",
             paragraphGetInvolved: "Questions or comments? Are you interested in getting involved? We'd love to hear from you. Please start by filling out the form below to let us know what you are interested in. That we we can keep you updated on all things Humans in Tech.",
@@ -32,10 +32,10 @@ class Landing extends Component {
             subtitle3Mentorship: "expectations",
             paragraphMentorship4: "In the spirit of collaboration and community, paying it forward right away is part of the model. We expect that mentees will become mentors for those following in their footsteps. Our vision is that mentors will also find mentors of their own thereby creating a chain of connected individuals built on the principles of generosity. We believe that this humble approach will help us create a safe, wise community focused on developing one another as students of the world.",
             subtitle4Mentorship: "outcomes",
-            mentorshipOutcomes1: "Develop your unique value proposition",
-            mentorshipOutcomes2: "Learn how to access the tech community",
-            mentorshipOutcomes3: "Support in your career journey",
-            mentorshipOutcomes4: "Model the humanity of the tech community and become a Humans in Tech agent of change",
+            mentorshipOutcomes1: "- Develop your unique value proposition",
+            mentorshipOutcomes2: "- Learn how to access the tech community",
+            mentorshipOutcomes3: "- Support in your career journey",
+            mentorshipOutcomes4: "- Model the humanity of the tech community and become a Humans in Tech agent of change",
             titleMeetTeam: "Meet the Team",
             paragraphMeetTeam: "Meet the people behind Humans in Tech.",
         },
@@ -59,7 +59,7 @@ class Landing extends Component {
           img: tim,
           name: 'Tim Perkins',
           position: 'data master',
-          bio: ''
+          bio: 'Tim believes that poorly performing technical projects are typically a symptom of poor interpersonal dynamics. Consequently, after earning a BS in Physics (Cal Poly, SLO) and a MS in Electrical & Computer Engineering (UCSB), he earned his PhD in Psychology (UCSB). Years of international consulting for data storage device R&D labs followed. Clients would engage Tim for his technical expertise, but they would retain him because the R&D teams became more effective. He saw firsthand that empathy is a critically important skill for all tech professionals. Tim co-founded Humans in Tech to promote empathy within the tech community.'
         },
         {
           img: sasha,
@@ -71,14 +71,13 @@ class Landing extends Component {
           img: kayce,
           name: 'Kayce Danna',
           position: 'software engineer',
-          bio: 'Kayce is a software engineer living in Denver, CO. After earning her Bachelors in Business Administration from the University of New Mexico she spent eight years working in the finance industry. Her eyes were opened to the vast world of software development and she knew she found her calling. So she took quit her finance career, enrolled in a web development immersive course, and a new passion was born. She thrilled to be working with Humans in Tech.'
+          bio: 'Kayce is a software engineer living in Denver, CO. After earning her Bachelors in Business Administration from the University of New Mexico she spent eight years working in the finance industry. Then her eyes were opened to the vast world of software development and she knew she found her calling. So she took quit her finance career, enrolled in a web development immersive course, and a new passion was born. She thrilled to be working with Humans in Tech.'
         },
       ];
 
   render() {
     const mentorshipOverwriteStyle = {
         paddingTop: 0,
-        paddingLeft: "3em",
         paddingRight: "3em",
     };
     return (
@@ -90,116 +89,125 @@ class Landing extends Component {
                 </div>
             </div>
 
-        <div className='taglineDiv'>
-            <div>
-                <h2>{this.text.taglineln1}</h2>
-                <h2 style={{marginTop: '-60px'}}>{this.text.taglineln2}</h2>
+            <div className='taglineDiv'>
+                    <h2>{this.text.taglineln1}</h2>
+                    <h2 style={{marginTop:'-20px'}}> {this.text.taglineln2}</h2>
             </div>
-        </div>
 
-        <div className='content'>
-            <div className='row'>
-                <div className="column">
-                    <Content title={this.text.content.titleVisonMission} bodyText={this.text.content.paragraphVisionMission} />
-                </div>
-                <div id='get-involved' className="column">
-                    <Content title={this.text.content.titleGetInvolved} bodyText={this.text.content.paragraphGetInvolved} />
-                    <SignUp
-                        label={this.text.buttonLabel.mailingList}
-                        formLink={this.text.forms.signUp}
-                    />
-                </div>
-            </div>
-        </div>
-
-        <div className='content'>
-            <div className='row'>
-                <div className='column-full'>
-                    <img className="valuesImg" src={valuesWordCloud} alt="valuesImg" />
-                </div>
-            </div>
-        </div>
-
-        <div className='content'>
-            <div className='row'>
-                <div id='mentorship' className="column-full">
-                    <Content 
-                        title={this.text.content.titleMentorship} 
-                    />
-                    <div style={mentorshipOverwriteStyle}>
-                        <Content 
-                            subtitle={this.text.content.subtitle1Mentorship}
-                            bodyText={this.text.content.paragraphMentorship1} 
-                        />
+            <div className='content'>
+                <div className='row'>
+                    <div className="column">
+                        <Content
+                            customStyling={"center"} 
+                            title={this.text.content.titleVisonMission} 
+                            bodyText={this.text.content.paragraphVisionMission} />
                     </div>
-                    <div style={mentorshipOverwriteStyle}>
-                        <Content 
-                            bodyText={this.text.content.paragraphMentorship2} 
-                        />
-                        <RaisedButton
-                            label={'Info Session'}
-                            href={'https://www.eventbrite.com/e/humans-in-tech-mentorship-program-info-session-tickets-44966526090?aff=es2'}
-                            target="_blank"
-                        / >
-
-                    </div>
-                    <div style={mentorshipOverwriteStyle}>
-                        <Content 
-                            subtitle={this.text.content.subtitle2Mentorship}
-                            bodyText={this.text.content.paragraphMentorship3} 
-                        />
-                    </div>
-                    <div style={mentorshipOverwriteStyle}>
-                        <Content 
-                            subtitle={this.text.content.subtitle3Mentorship}
-                            bodyText={this.text.content.paragraphMentorship3} 
+                    <div id='get-involved' className="column">
+                        <Content
+                            customStyling={"center"}
+                            title={this.text.content.titleGetInvolved} 
+                            bodyText={this.text.content.paragraphGetInvolved} />
+                        <SignUp
+                            label={this.text.buttonLabel.mailingList}
+                            formLink={this.text.forms.signUp}
                         />
                     </div>
                 </div>
-                <div className="column-full" style={mentorshipOverwriteStyle}>
-                    <Content 
-                        subtitle={this.text.content.subtitle4Mentorship}
-                    />
-                    <div className="list-items" style={{lineHeight: '1.5'}}>
-                            <p>{this.text.content.mentorshipOutcomes1} <br />
-                                {this.text.content.mentorshipOutcomes2} <br />
-                                {this.text.content.mentorshipOutcomes3} <br />
-                                {this.text.content.mentorshipOutcomes4} <br />
-                            </p>
+            </div>
+
+            <div className='content'>
+                <div className='row'>
+                    <div className='column-full'>
+                        <img className="valuesImg" src={valuesWordCloud} alt="valuesImg" />
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div className='content'>
-            <div className='row'>
-                <div className="column-full">
-                    <SignUp 
-                        label={this.text.buttonLabel.mentorshipApplication}
-                        title={'Application Coming Soon...'}/>
+            <div className='content'>
+                <div className='row'>
+                    <div id='mentorship' className="column-full">
+                        <Content 
+                            title={this.text.content.titleMentorship} 
+                        />
+                        <div style={mentorshipOverwriteStyle}>
+                            <Content 
+                                subtitle={this.text.content.subtitle1Mentorship}
+                                bodyText={this.text.content.paragraphMentorship1} 
+                            />
+                        </div>
+                        <div id='mentorship' style={mentorshipOverwriteStyle}>
+                            <Content 
+                                bodyText={this.text.content.paragraphMentorship2} 
+                            />
+                            <RaisedButton
+                                label={'Info Session'}
+                                href={'https://www.eventbrite.com/e/humans-in-tech-mentorship-program-info-session-tickets-44966526090?aff=es2'}
+                                target="_blank"
+                            / >
+
+                        </div>
+                        <div style={mentorshipOverwriteStyle}>
+                            <Content 
+                                subtitle={this.text.content.subtitle2Mentorship}
+                                bodyText={this.text.content.paragraphMentorship3} 
+                            />
+                        </div>
+                        <div style={mentorshipOverwriteStyle}>
+                            <Content 
+                                subtitle={this.text.content.subtitle3Mentorship}
+                                bodyText={this.text.content.paragraphMentorship3} 
+                            />
+                        </div>
+                    </div>
+                    <div className="column-full" style={mentorshipOverwriteStyle}>
+                        <Content 
+                            subtitle={this.text.content.subtitle4Mentorship}
+                        />
+                        <div className="list-items" style={{lineHeight: '1.5'}}>
+                                <p>{this.text.content.mentorshipOutcomes1} <br />
+                                    {this.text.content.mentorshipOutcomes2} <br />
+                                    {this.text.content.mentorshipOutcomes3} <br />
+                                    {this.text.content.mentorshipOutcomes4} <br />
+                                </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div className='content'>
-            <div className='row'>
-                <div id='meet-the-team' className="column-full">
-                    <Content 
-                        title={this.text.content.titleMeetTeam} 
-                        bodyText={this.text.content.paragraphMeetTeam}
-                     />
+            <div className='content'>
+                <div className='row'>
+                    <div className="column-full">
+                        <SignUp 
+                            label={this.text.buttonLabel.mentorshipApplication}
+                            title={'Application Coming Soon...'}/>
+                    </div>
                 </div>
             </div>
+
+            <div className='content'>
+                <div className='row'>
+                    <div id='meet-the-team' className="column-full">
+                        <Content 
+                            title={this.text.content.titleMeetTeam} 
+                            bodyText={this.text.content.paragraphMeetTeam}
+                        />
+                    </div>
+                </div>
+            </div>
+            {this.tilesData.map((tile) => (
+                <MeetTeamBlock
+                    key={tile.name}
+                    name={tile.name}
+                    bio={tile.bio}
+                    picture={tile.img}
+                />
+            ))}
+            <div className='column-full'>
+                <div className='footer'> 
+                    <p>© 2018 Humans In Tech. all rights reserved.</p>
+                </div>
+            </div> 
         </div>
-        {this.tilesData.map((tile) => (
-            <MeetTeamBlock
-                key={tile.name}
-                name={tile.name}
-                bio={tile.bio}
-                picture={tile.img}
-            />
-        ))}
-    </div>
 
     );
   }
