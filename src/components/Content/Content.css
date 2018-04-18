@@ -3,7 +3,7 @@
 }
 
 .content h2 {
-    font-family: 'Arvo', serif;
+    font-family: 'helvetica';
     color: #363636;
     font-weight: 800;
     text-align: left;
@@ -11,7 +11,7 @@
 }
 
 .content h3 {
-    font-family: 'Aveno', serif;
+    font-family: 'helvetica';
     color: #363636;
     font-weight: 800;
     text-align: left;
@@ -19,7 +19,7 @@
 }
 .content p {
     text-align: left;
-    font-family: 'Avenir', serif;
+    font-family: 'helvetica';
     color: #363636;
     font-weight: 300;
     font-size: 1.0em;

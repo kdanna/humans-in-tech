@@ -35,7 +35,7 @@
 
 .taglineDiv h2 {
   color:#363636;
-  font-family: 'Arvo', serif;
+  font-family: 'helvetica';
   font-weight: 800;
   font-size: 1.8em;
   padding-left: 1em;
@@ -46,7 +46,7 @@
 .tagline p {
   text-align: center;
   color:#363636;
-  font-family: 'Arvo', serif;
+  font-family: 'helvetica';
   font-weight: 800;
   font-size: 1.4em;
   padding-left: 1em;
@@ -72,7 +72,7 @@
 
 .list-items {
   text-align: left;
-  font-family: 'Avenir', serif;
+  font-family: 'helvetica';
   color: #363636;
   font-weight: 300;
   font-size: 1.0em;
