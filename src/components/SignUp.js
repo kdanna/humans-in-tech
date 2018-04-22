@@ -38,7 +38,7 @@ class SignUp extends Component {
                     open={this.state.open}
                     actions={actions}
                     onRequestClose={this.handleClose}
-                    contentStyle={{width: "50%", maxWidth: "none", textAlign: "center"}}
+                    contentStyle={{width: "66%", maxWidth: "none", textAlign: "center"}}
                     autoScrollBodyContent={true}
                 >
                 <div>

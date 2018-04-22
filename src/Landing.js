@@ -44,7 +44,8 @@ class Landing extends Component {
             mentorshipApplication: "Apply Now",
         },
         forms: {
-            signUp: <iframe title='contactForm' src="https://docs.google.com/forms/d/e/1FAIpQLSeZTjMCK4iMPgpaKEm6TA6s0y46N3o6Ia_DI1tHTiFrZzihrQ/viewform?embedded=true" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>,
+            signUp: <iframe title='contactForm' src="https://docs.google.com/forms/d/e/1FAIpQLSeZTjMCK4iMPgpaKEm6TA6s0y46N3o6Ia_DI1tHTiFrZzihrQ/viewform?embedded=true" width="90%" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>,
+            menteeApp: <iframe title='menteeForm' src="https://docs.google.com/forms/d/e/1FAIpQLSf9fTMdlP3pU0SoAGXJv3egd6PSfu49prdKe8LDaG6yg0pgHA/viewform?embedded=true" width="90%" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         }
     };
 
@@ -155,7 +156,7 @@ class Landing extends Component {
                         <div style={mentorshipOverwriteStyle}>
                             <Content 
                                 subtitle={this.text.content.subtitle3Mentorship}
-                                bodyText={this.text.content.paragraphMentorship3} 
+                                bodyText={this.text.content.paragraphMentorship4} 
                             />
                         </div>
                     </div>
@@ -179,7 +180,7 @@ class Landing extends Component {
                     <div className="column-full">
                         <SignUp 
                             label={this.text.buttonLabel.mentorshipApplication}
-                            title={'Application Coming Soon...'}/>
+                            title={this.text.forms.menteeApp}/>
                     </div>
                 </div>
             </div>
