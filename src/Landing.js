@@ -44,8 +44,8 @@ class Landing extends Component {
             mentorshipApplication: "Apply Now",
         },
         forms: {
-            signUp: <iframe title='contactForm' src="https://docs.google.com/forms/d/e/1FAIpQLSeZTjMCK4iMPgpaKEm6TA6s0y46N3o6Ia_DI1tHTiFrZzihrQ/viewform?embedded=true" width="90%" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>,
-            menteeApp: <iframe title='menteeForm' src="https://docs.google.com/forms/d/e/1FAIpQLSf9fTMdlP3pU0SoAGXJv3egd6PSfu49prdKe8LDaG6yg0pgHA/viewform?embedded=true" width="90%" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            signUp: <iframe title='contactForm' src="https://docs.google.com/forms/d/e/1FAIpQLSeZTjMCK4iMPgpaKEm6TA6s0y46N3o6Ia_DI1tHTiFrZzihrQ/viewform?embedded=true" width="90%" height="300" frameBorder="0" marginHeight="0" marginWidth="0">Loading...</iframe>,
+            menteeApp: <iframe title='menteeForm' src="https://docs.google.com/forms/d/e/1FAIpQLSf9fTMdlP3pU0SoAGXJv3egd6PSfu49prdKe8LDaG6yg0pgHA/viewform?embedded=true" width="90%" height="300" frameBorder="0" marginHeight="0" marginWidth="0">Loading...</iframe>
         }
     };
 
@@ -178,9 +178,16 @@ class Landing extends Component {
             <div className='content'>
                 <div className='row'>
                     <div className="column-full">
-                        <SignUp 
+                        {/* <SignUp 
                             label={this.text.buttonLabel.mentorshipApplication}
-                            title={this.text.forms.menteeApp}/>
+                            title={this.text.forms.menteeApp}
+                        /> */}
+                        <RaisedButton
+                            label={'Mentee Application'}
+                            secondary={true}
+                            href={'https://docs.google.com/forms/d/e/1FAIpQLSf9fTMdlP3pU0SoAGXJv3egd6PSfu49prdKe8LDaG6yg0pgHA/viewform?usp=sf_link'}
+                            target="_blank"
+                        />
                     </div>
                 </div>
             </div>
