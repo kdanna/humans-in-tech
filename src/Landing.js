@@ -28,7 +28,7 @@ class Landing extends Component {
             paragraphMentorship1: "The Humans in Tech mentorship program is designed as an experiment in creating a collaborative tech community that continuously gives back to one another. You will be paired with a software developer or data scientist/analyst for a 2 month period. During this time, you will explore topics that go beyond technical skills. You will reach deep to understand what makes you tick and develop your unique value proposition as well as attend a meetup together with your mentor to build your confidence as a member of the community!",
             paragraphMentorship2: "If this sounds exciting to you, we invite you to attend an information session to learn more about it. The session will be held at OrthoFi, Inc. on Wednesday, April 25th @ at 303 East 17th Avenue #400, Denver, CO 80203. Please RSVP to the session on the following EventBrite page:",
             subtitle2Mentorship: "Who is it for",   
-            paragraphMentorship3: "We are looking for aspiring or current software developers and aspiring or current data scientists who believe in our shared vision for developing a community. You should be in the Denver area and available during the June/July timeframe for 5 in-person sessions (flexible scheduling) with your mentor as well as the week of May 21st and first week of August for a mentor-matching social and post-mortem whose exact dates/times are TBD.",      
+            paragraphMentorship3: "We are looking for aspiring or current software developers and aspiring or current data scientists / data analysts who believe in our shared vision for developing a community.",
             subtitle3Mentorship: "Expectations",
             paragraphMentorship4: "In the spirit of collaboration and community, paying it forward right away is part of the model. We expect that mentees will become mentors for those following in their footsteps. Our vision is that mentors will also find mentors of their own thereby creating a chain of connected individuals built on the principles of generosity. We believe that this humble approach will help us create a safe, wise community focused on developing one another as students of the world.",
             subtitle4Mentorship: "Outcomes",
@@ -36,6 +36,8 @@ class Landing extends Component {
             mentorshipOutcomes2: "- Learn how to access the tech community",
             mentorshipOutcomes3: "- Support in your career journey",
             mentorshipOutcomes4: "- Model the humanity of the tech community and become a Humans in Tech agent of change",
+            subtitile5Mentorship: "Important Dates",
+            paragraphMentorship5: "You should be in the Denver area and available during the June/July timeframe for 5 in-person sessions (flexible scheduling) with your mentor. The application is due no later than May 20th and we will let you know by May 21st. There will be a mentor-matching social on May 23rd location TBD, and a post-mortem around the first week of August with the exact date TBD.",
             titleMeetTeam: "Meet the Team",
             paragraphMeetTeam: "Meet the people behind Humans in Tech.",
         },
@@ -136,7 +138,7 @@ class Landing extends Component {
                                 bodyText={this.text.content.paragraphMentorship1} 
                             />
                         </div>
-                        <div id='mentorship' style={mentorshipOverwriteStyle}>
+                        {/* <div id='mentorship' style={mentorshipOverwriteStyle}>
                             <Content 
                                 bodyText={this.text.content.paragraphMentorship2} 
                             />
@@ -146,7 +148,7 @@ class Landing extends Component {
                                 target="_blank"
                             / >
 
-                        </div>
+                        </div> */}
                         <div style={mentorshipOverwriteStyle}>
                             <Content 
                                 subtitle={this.text.content.subtitle2Mentorship}
@@ -171,6 +173,12 @@ class Landing extends Component {
                                     {this.text.content.mentorshipOutcomes4} <br />
                                 </p>
                         </div>
+                    </div>
+                    <div style={mentorshipOverwriteStyle}>
+                        <Content 
+                            subtitle={this.text.content.subtitile5Mentorship}
+                            bodyText={this.text.content.paragraphMentorship5} 
+                        />
                     </div>
                 </div>
             </div>
