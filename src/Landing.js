@@ -177,8 +177,14 @@ class Landing extends Component {
                     <div style={mentorshipOverwriteStyle}>
                         <Content 
                             subtitle={this.text.content.subtitile5Mentorship}
-                            bodyText={this.text.content.paragraphMentorship5} 
                         />
+                        <div className="list-items" style={{lineHeight: '1.5'}}>
+                                <p> {"- Applilcation due date: May 20th"} <br />
+                                    {"- We will let applicants know by: May 21st"} <br />
+                                    {"- If selected, there will be a social event in Denver the evening of: May 23rd"} <br />
+                                    {"- The program offically starts in June"} <br />
+                                </p>
+                        </div>
                     </div>
                 </div>
             </div>
