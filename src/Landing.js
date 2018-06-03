@@ -10,7 +10,7 @@ import sasha from "./images/sasha.jpg";
 import kayce from "./images/kayce.jpg";
 import { NavBar } from "./components/Navbars";
 import MeetTeamBlock from "./components/MeetTeamCards";
-import { RaisedButton } from "material-ui";
+// import { RaisedButton } from "material-ui";
 
 
 class Landing extends Component {
@@ -36,9 +36,7 @@ class Landing extends Component {
             mentorshipOutcomes2: "- Learn how to access the tech community",
             mentorshipOutcomes3: "- Support in your career journey",
             mentorshipOutcomes4: "- Model the humanity of the tech community and become a Humans in Tech agent of change",
-            subtitile5Mentorship: "Important Dates",
-            paragraphMentorship5: "You should be in the Denver area and available during the June/July timeframe for 5 in-person sessions (flexible scheduling) with your mentor. The application is due no later than May 20th and we will let you know by May 21st. There will be a mentor-matching social on May 23rd location TBD, and a post-mortem around the first week of August with the exact date TBD.",
-            titleMeetTeam: "Meet the Team",
+            titleMeetTeam: "Meet the HIT Team",
             paragraphMeetTeam: "Meet the people behind Humans in Tech.",
         },
         buttonLabel: {
@@ -174,28 +172,12 @@ class Landing extends Component {
                                 </p>
                         </div>
                     </div>
-                    <div style={mentorshipOverwriteStyle}>
-                        <Content 
-                            subtitle={this.text.content.subtitile5Mentorship}
-                        />
-                        <div className="list-items" style={{lineHeight: '1.5'}}>
-                                <p> {"- Applilcation due date: May 20th"} <br />
-                                    {"- We will let applicants know by: May 21st"} <br />
-                                    {"- If selected, there will be a social event in Denver the evening of: May 23rd"} <br />
-                                    {"- The program offically starts in June"} <br />
-                                </p>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-            <div className='content'>
+            {/* <div className='content'>
                 <div className='row'>
                     <div className="column-full">
-                        {/* <SignUp 
-                            label={this.text.buttonLabel.mentorshipApplication}
-                            title={this.text.forms.menteeApp}
-                        /> */}
                         <RaisedButton
                             label={'Mentee Application'}
                             secondary={true}
@@ -204,7 +186,7 @@ class Landing extends Component {
                         />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className='content'>
                 <div className='row'>
