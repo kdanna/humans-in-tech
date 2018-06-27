@@ -1,23 +1,31 @@
 import React, { Component } from "react"
 import Dialog from 'material-ui/Dialog'
 import { RaisedButton } from 'material-ui'
+import ReactGA from 'react-ga';
 
 // pass in Google Forms
-class SignUp extends Component {
+class BtnModal extends Component {
     constructor(props) {
         super(props)
         this.state = {
             open: false,
-            btnLabel: props.label,
-            formLink: props.formLink,
-            title: props.title,
         }
     }
     handleOpen = () => {
         this.setState({open: true})
+        ReactGA.event({
+            category: 'Site',
+            action: 'Modal opened',
+            label: this.props.label
+          });
     }
     handleClose = () => {
         this.setState({open: false})
+        ReactGA.event({
+            category: 'Site',
+            action: 'Modal closed',
+            label: this.props.label
+          });
     }
     
     render() {
@@ -31,10 +39,10 @@ class SignUp extends Component {
         ]
         return (
             <span>
-                <RaisedButton label={this.state.btnLabel} onClick={this.handleOpen} secondary={true}/>
+                <RaisedButton label={this.props.label} onClick={this.handleOpen} secondary={true}/>
                 <Dialog
                     modal={false}
-                    title={this.state.title}
+                    title={this.props.title}
                     open={this.state.open}
                     actions={actions}
                     onRequestClose={this.handleClose}
@@ -42,7 +50,7 @@ class SignUp extends Component {
                     autoScrollBodyContent={true}
                 >
                 <div>
-                    {this.state.formLink}
+                    {this.props.formLink}
                 </div> 
                 </Dialog>
             </span>
@@ -50,4 +58,4 @@ class SignUp extends Component {
     }
   }
    
-  export default SignUp
+  export default BtnModal

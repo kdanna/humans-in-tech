@@ -1,11 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter } from "react-router-dom";
-import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import ReactGA from 'react-ga';
 
+import './index.css';
 import App from './App'
+
+ReactGA.initialize('UA-121425525-1', {
+    debug: true,
+    titleCase: true,
+  });
+ReactGA.pageview(window.location.pathname + window.location.search)
 
 registerServiceWorker();
 

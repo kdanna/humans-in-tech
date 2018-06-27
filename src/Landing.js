@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import './App.css';
 import hitLogo from './images/hitLogoWhite.svg';
 import Content from './components/Content/Content';
-import SignUp from "./components/SignUp";
+import BtnModal from "./components/BtnModal";
 import valuesWordCloud from "./images/valuesWordCloud.png";
 import sagi from "./images/sagi.jpg";
 import tim from "./images/tim.jpg";
@@ -108,7 +108,7 @@ class Landing extends Component {
                             customStyling={"center"}
                             title={this.text.content.titleGetInvolved} 
                             bodyText={this.text.content.paragraphGetInvolved} />
-                        <SignUp
+                        <BtnModal
                             label={this.text.buttonLabel.mailingList}
                             formLink={this.text.forms.signUp}
                         />
