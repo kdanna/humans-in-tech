@@ -14,7 +14,10 @@ ReactGA.initialize('UA-121425525-1', {
   });
 ReactGA.pageview(window.location.pathname + window.location.search)
 
-registerServiceWorker();
+//serviceWroker can only be registered on sercure sites
+if(window.location.protocol === 'https:'){
+    registerServiceWorker()
+}
 
 ReactDOM.render(
     <MuiThemeProvider>
